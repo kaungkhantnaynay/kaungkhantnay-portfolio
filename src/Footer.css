@@ -1,0 +1,79 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0; /* Initial state for animation */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.get-in-touch {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #15803d, #fff, #15803d); /* Using green-700 and white */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: color-text 2s linear infinite; /* Increased speed to 2s */
+  background-size: 200% 100%;
+}
+
+@keyframes color-text {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.email-container {
+  margin-bottom: 40px;
+}
+
+.email-container a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-container a:hover {
+  background-color: white;
+  color: black;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+}
