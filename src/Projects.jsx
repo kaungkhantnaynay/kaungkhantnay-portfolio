@@ -32,7 +32,7 @@ export default function Projects() {
         "BeanCo is a self-developed e-commerce frontend project created to showcase my skills in building modern, responsive, and interactive web applications. The website represents a minimal but functional online coffee bean store where users can explore products, view details, and experience an organized shopping interface.",
     image: Bean_Co,
     tools: ["React", "JavaScript", "Next.js", "TypeScript", "CSS", "Tailwind", "Zustand"],
-    link: "https://beanco-mini-ecommerce.vercel.app/",
+    link: "https://beanco-mini-e-commerce.vercel.app/",
     github: "https://github.com/kaungkhantnaynay/mini-e-commerce",
     },
     {
