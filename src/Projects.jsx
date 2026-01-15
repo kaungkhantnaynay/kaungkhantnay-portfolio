@@ -33,7 +33,7 @@ export default function Projects() {
     image: Bean_Co,
     tools: ["React", "JavaScript", "Next.js", "TypeScript", "CSS", "Tailwind", "Zustand"],
     link: "https://beanco-mini-e-commerce.vercel.app/",
-    github: "https://github.com/kaungkhantnaynay/mini-e-commerce",
+    github: "https://github.com/kaungkhantnaynay/beanco-mini-e-commerce",
     },
     {
     title: "First Rubber (Cooperate Website)",
