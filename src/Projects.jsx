@@ -23,7 +23,7 @@ export default function Projects() {
         "All of Us Are Smart is an e-commerce shoe website designed to give customers a smooth and easy shopping experience. It features a modern design, product browsing, and a simple checkout process. The site is responsive, user-friendly, and built to support future features like product filters, reviews, and secure payments.",
     image: shoe_retail,
     tools: ["React", "JavaScript", "CSS3", "Redux", "TailwindCSS", "Authentication", "Firebase", "API"],
-    link: "https://all-of-us-are-smart.web.app/",
+    link: "https://all-of-us-are-smart.vercel.app/",
     github: "https://github.com/kaungkhantnaynay/AllOfUsAreSmart",
     },
     {
