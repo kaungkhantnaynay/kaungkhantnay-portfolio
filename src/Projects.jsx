@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import career_coaching from './assets/career-coaching-website.PNG'
-import shoe_retail from './assets/all-of-us-are-smart-website.PNG'
+import shoe_retail from './assets/shoe_retail.PNG'
 import first_rubber from './assets/first-rubber.PNG'
 import Bean_Co from './assets/BeanCo.PNG'
+import logistics from './assets/logistics_erp.PNG'
 
 export default function Projects() {
   const projects = [
@@ -38,11 +39,20 @@ export default function Projects() {
     {
     title: "First Rubber (Cooperate Website)",
     description:
-        "First Rubber is a company website showcasing their rubber products and solutions. It features product catalogs, technical specifications, and applications, with a focus on clear presentation, easy navigation, and customer contact options",
+        "First Rubber is a company website showcasing their rubber products and solutions. It features product catalogs, technical specifications, and applications, with a focus on clear presentation, easy navigation, and customer contact options.",
     image: first_rubber,
     tools: ["WordPress", "API", "PHP", "Elementor", "Custom CSS"],
     link: "http://test.firstrubber.com/",
     },
+    {
+    title: "Logistics ERP Project",
+    description:
+        "A full-stack Logistics ERP web application designed to manage orders, inventory, shipments, and operational workflows. Built with role-based access, real-time updates, and a scalable architecture to support real-world logistics operations.",
+    image: logistics,
+    tools: ["Next.js", "TypeScript", "TailwindCSS", "Recharts", "Node.js", "MySQL", "RESTful APIs"],
+    link: "https://logistics-erp-project.vercel.app/",
+    github: "https://github.com/kaungkhantnaynay/Logistics-ERP-Project",
+    }
   ];
 
 

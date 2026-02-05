@@ -9,7 +9,7 @@ export default function Experience() {
             company: "Freelance Projects | Remote",
             logo: <img src={freelance} alt="Freelance" className="w-20 h-30 my-10" />,
             role: "Full Stack Web Developer",
-            period: "SEP 2024 - Present",
+            period: "MAY 2024 - Present",
             description: "As a freelance web developer, I collaborated with multiple clients to design and build fully responsive websites and web apps using React, Node.js, and Tailwind CSS. Delivered optimized and SEO-friendly websites that improved client visibility and user engagement. Managed all phases of the development lifecycle, from requirement gathering to final deployment and maintenance."
         },
         {
