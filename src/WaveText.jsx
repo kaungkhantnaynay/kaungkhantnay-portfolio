@@ -1,61 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export default function WaveText() {
   const line1 = "I'm Kaung Khant Nay";
   const line2 = "a Full Stack Web Developer";
 
   return (
-    <h2 className="text-xl sm:text-4xl md:text-5xl leading-[1.5] font-extrabold text-green-700 mt-10 text-center">
-      <div className='whitespace-nowrap'>
+    <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+      <span className="block text-green-400">
         <ScrambleText text={line1} delay={0} />
-      </div>
-      <br />
-      <div className='mt-2 whitespace-nowrap'>
+      </span>
+      <span className="mt-2 block text-white">
         <ScrambleText text={line2} delay={0.5} />
-      </div>
-    </h2>
+      </span>
+      <span className="mt-4 block text-base font-semibold tracking-normal text-neutral-300 sm:text-lg">
+        You can call me Nay.
+      </span>
+    </h1>
   );
 }
 
 function ScrambleText({ text, delay = 0 }) {
+  const shouldReduceMotion = useReducedMotion();
   const [displayText, setDisplayText] = useState('');
-  const [isComplete, setIsComplete] = useState(false);
   
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
   
   useEffect(() => {
+    if (shouldReduceMotion) {
+      return undefined;
+    }
+
     let iteration = 0;
     const maxIterations = text.length * 2; // Scramble twice per character
     
     const timeout = setTimeout(() => {
       const interval = setInterval(() => {
-        setDisplayText(prevText => {
-          return text
+        setDisplayText(
+          text
             .split('')
             .map((char, index) => {
-              // If we've reached this character's reveal point
-              if (index < iteration / 2) {
+              if (index < iteration / 2 || char === ' ') {
                 return char;
               }
-              
-              // Show space as space
-              if (char === ' ') {
-                return ' ';
-              }
-              
-              // Otherwise scramble
+
               return characters[Math.floor(Math.random() * characters.length)];
             })
-            .join('');
-        });
+            .join('')
+        );
         
         iteration++;
         
         if (iteration > maxIterations) {
           clearInterval(interval);
           setDisplayText(text);
-          setIsComplete(true);
         }
       }, 30); // Speed of scramble effect
       
@@ -63,7 +61,7 @@ function ScrambleText({ text, delay = 0 }) {
     }, delay * 1000);
     
     return () => clearTimeout(timeout);
-  }, [text, delay]);
+  }, [text, delay, shouldReduceMotion]);
   
   return (
     <motion.span
@@ -72,8 +70,7 @@ function ScrambleText({ text, delay = 0 }) {
       transition={{ duration: 0.3, delay }}
       className="inline-block"
     >
-      {displayText}
+      {shouldReduceMotion ? text : displayText}
     </motion.span>
   );
 }
-

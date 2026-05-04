@@ -1,10 +1,17 @@
 .footer {
-  background-color: #000;
+  background:
+    radial-gradient(circle at top left, rgba(21, 128, 61, 0.24), transparent 34rem),
+    #050505;
   color: white;
-  padding: 80px 0;
+  padding: 96px 24px;
   text-align: center;
   opacity: 0; /* Initial state for animation */
   animation: fadeIn 1s ease-in-out forwards;
+}
+
+.footer-content {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {
@@ -17,14 +24,32 @@
 }
 
 .get-in-touch {
-  font-size: 4rem;
-  margin-bottom: 40px;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+  margin: 12px 0 24px;
   background: linear-gradient(to right, #15803d, #fff, #15803d); /* Using green-700 and white */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: color-text 2s linear infinite; /* Increased speed to 2s */
   background-size: 200% 100%;
+}
+
+.footer-eyebrow {
+  color: #4ade80;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.footer-subtitle {
+  color: #d4d4d4;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 auto 34px;
+  max-width: 560px;
 }
 
 @keyframes color-text {
@@ -43,19 +68,36 @@
 .email-container a {
   color: white;
   text-decoration: none;
-  border: 1px solid white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.28);
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .email-container a:hover {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #050505;
+  box-shadow: 0 16px 34px rgba(21, 128, 61, 0.42);
+  transform: translateY(-3px);
+}
+
+.email-container a:active {
+  box-shadow: 0 8px 18px rgba(21, 128, 61, 0.3);
+  transform: translateY(0) scale(0.98);
+}
+
+.email-container a:focus-visible,
+.social-media a:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 4px;
 }
 
 .social-media {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -63,17 +105,25 @@
 .social-media a {
   color: white;
   font-size: 2rem;
-  transition: transform 0.3s ease;
-  border: 1px solid white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 50%;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.24);
 }
 
 .social-media a:hover {
-  transform: scale(1.1);
+  transform: translateY(-3px) scale(1.08);
   background-color: white;
   color: black;
+  box-shadow: 0 16px 34px rgba(21, 128, 61, 0.42);
+}
+
+.social-media a:active {
+  box-shadow: 0 8px 18px rgba(21, 128, 61, 0.3);
+  transform: translateY(0) scale(0.98);
 }

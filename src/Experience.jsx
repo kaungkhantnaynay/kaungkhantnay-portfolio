@@ -1,49 +1,29 @@
-import React from 'react'
-import freelance from './assets/freelance.png'
-import mysoft from './assets/mySoft.jpeg'
-import yoma from './assets/yoma-bank-logo.png'
+import React from 'react';
+import { experiences } from './data/experience';
 
 export default function Experience() {
-    const experiences = [
-        {
-            company: "Freelance Projects | Remote",
-            logo: <img src={freelance} alt="Freelance" className="w-20 h-30 my-10" />,
-            role: "Full Stack Web Developer",
-            period: "MAY 2024 - Present",
-            description: "As a freelance web developer, I collaborated with multiple clients to design and build fully responsive websites and web apps using React, Node.js, and Tailwind CSS. Delivered optimized and SEO-friendly websites that improved client visibility and user engagement. Managed all phases of the development lifecycle, from requirement gathering to final deployment and maintenance."
-        },
-        {
-            company: "MySoft Corporation Sdn Bhd | Malaysia",
-            logo: <img src={mysoft} alt="MySoft Logo" />,
-            role: "Junior Data Analyst(Contract)",
-            period: "MAR 2024 - SEP 2024",
-            description: "Skilled in extracting, cleaning, and transforming complex datasets using SQL to ensure accurate reporting and insights. Developed interactive Power BI dashboards to track key operational and financial KPIs. Supported ERP database migration projects, maintaining data accuracy, consistency, and integrity throughout the process."
-        },
-        {
-            company: "Yoma Bank Co.Ltd | Myanmar",
-            logo: <img src={yoma} alt="Yoma Bank Logo" />,
-            role: "Network & Data Center Engineer",
-            period: "JUL 2019 - FEB 2024",
-            description: "Experienced in monitoring and maintaining enterprise network infrastructure to ensure optimal performance and uptime within a 24/7 Network Operations Center (NOC). Assisted in network configuration, cabling, and hardware installation to ensure secure and reliable connectivity across multiple branches."
-        }
-    ];
-
-    return(
-        <section className='py-20 text-center'>
-            <div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-                {experiences.map((exp,index)=>(
-                    <div key={index} className='rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 text-left'>
-                        <h3 className='text-2xl md:text-2xl font-semibold text-green-700'>{exp.role}</h3>
-                        <div className='flex items-center space-x-2 mt-1'>
-                            {exp.logo}
-                            <p className='font-medium text-sm md:text-base'>{exp.company}</p>
-                        </div>
-                        <p className='text-sm md:text-sm mt-1 italic'>{exp.period}</p>
-                        <p className='mt-4 text-sm md:text-base leading-relaxed'>{exp.description}</p>
-                    </div>
-                ))}
+  return (
+    <section aria-labelledby="experience-heading">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {experiences.map((exp) => (
+          <article
+            key={`${exp.company}-${exp.role}`}
+            className="group flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 text-left shadow-lg shadow-neutral-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-green-600/30 hover:shadow-2xl hover:shadow-green-950/10"
+          >
+            <div className="flex items-start justify-between gap-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-green-700">{exp.period}</p>
+                <h3 className="mt-3 text-xl font-bold leading-tight text-neutral-950">{exp.role}</h3>
+              </div>
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-neutral-200 bg-neutral-50 p-2 shadow-sm transition-colors duration-300 group-hover:border-green-600/30 group-hover:bg-green-50">
+                <img src={exp.logo} alt={exp.logoAlt} className="max-h-12 max-w-12 object-contain" />
+              </div>
             </div>
-        </section>
-    )
+            <p className="mt-4 text-sm font-semibold text-neutral-700">{exp.company}</p>
+            <p className="mt-4 flex-1 text-sm leading-6 text-neutral-600">{exp.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
-
