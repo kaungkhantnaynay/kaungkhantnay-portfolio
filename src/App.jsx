@@ -4,7 +4,7 @@ import Experience from './Experience.jsx'
 import SkillsTools from './SkillsTools.jsx'
 import Projects from './Projects.jsx'
 import Footer from './Footer.jsx'
-import profile from './assets/Portfolio-img.jpeg'
+import CodingAnimation from './CodingAnimation.jsx'
 
 const navLinkClass = 'text-sm font-medium text-gray-300 transition-colors duration-200 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-500';
 
@@ -81,9 +81,6 @@ const App = () => {
       <section id="portfolio" className="overflow-hidden bg-neutral-950 px-6 pt-32 pb-20 text-white md:pt-40">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="text-center lg:text-left">
-            <p className="mb-5 inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-300 shadow-lg shadow-green-950/30">
-              Nay • Full Stack Web Developer
-            </p>
             <WaveText/>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-300 lg:mx-0">
               Former Network & Data Center Engineer building reliable, user-friendly web applications with a practical infrastructure mindset.
@@ -118,20 +115,7 @@ const App = () => {
             </dl>
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm">
-            <div className="absolute inset-0 rounded-[2rem] bg-green-500/20 blur-3xl" aria-hidden="true"></div>
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-4 shadow-2xl shadow-green-950/40">
-              <img
-                src={profile}
-                alt="Kaung Khant Nay, also known as Nay, profile portrait"
-                className="h-[420px] w-full rounded-[1.5rem] object-cover object-top"
-              />
-              <div className="mt-4 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur">
-                <p className="text-sm font-semibold text-green-300">Available for web projects</p>
-                <p className="mt-1 text-sm text-neutral-300">React, Next.js, Node.js, Tailwind CSS, and database-backed applications.</p>
-              </div>
-            </div>
-          </div>
+          <CodingAnimation />
         </div>
       </section>
 
