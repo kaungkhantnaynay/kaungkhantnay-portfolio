@@ -13,8 +13,8 @@ export const projects = [
     image: careerCoaching,
     imageAlt: 'Career coaching website landing page screenshot',
     tools: ['React', 'HTML', 'CSS', 'GSAP', 'Canvas API', 'TailwindCSS', 'Git'],
-    link: 'https://oracle-career-coaching.vercel.app/',
-    github: 'https://github.com/kaungkhantnaynay/Oracle-Career-Coaching-Program',
+    link: 'https://network-ccp.vercel.app/',
+    github: 'https://github.com/kaungkhantnaynay/Network-CCP',
   },
   {
     title: 'Healing Club Myanmar',
