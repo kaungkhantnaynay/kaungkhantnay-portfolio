@@ -79,7 +79,17 @@ export default function Projects() {
                     View Project <FaExternalLinkAlt aria-hidden="true" />
                   </a>
 
-                  {project.github && (
+                  {project.github === 'private' ? (
+                    <button
+                      type="button"
+                      className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-2 text-sm font-semibold text-green-700 opacity-75 shadow-md shadow-neutral-900/10"
+                      aria-label={`GitHub repository for ${project.title} is private`}
+                      title="Private repository"
+                    >
+                      <FaGithub className="h-5 w-5" aria-hidden="true" />
+                      Private
+                    </button>
+                  ) : project.github ? (
                     <a
                       href={project.github}
                       target="_blank"
@@ -89,7 +99,7 @@ export default function Projects() {
                     >
                       <FaGithub className="w-8 h-8" aria-hidden="true" />
                     </a>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </motion.div>

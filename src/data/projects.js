@@ -1,29 +1,30 @@
-import careerCoaching from '../assets/career-coaching-website.PNG';
+import careerCoaching from '../assets/NCCP.png';
 import shoeRetail from '../assets/shoe_retail.PNG';
 import firstRubber from '../assets/first-rubber.PNG';
 import beanCo from '../assets/BeanCo.PNG';
 import logistics from '../assets/logistics_erp.PNG';
+import HealingClub from '../assets/Healing-Club-mm.png'
 
 export const projects = [
   {
-    title: 'Career Coaching Website',
+    title: 'Network Career Coaching Program',
     description:
-      'Oracle Career Coaching Program helps IT professionals, students, and career changers build stronger skills in networking and databases. It offers guidance, coaching, and learning sessions to improve technical knowledge, prepare for certifications, and support career growth.',
+      'NCCP Career Coaching Program helps IT professionals, students, and career changers build stronger skills in networking and IT support. It offers guidance, coaching, and learning sessions to improve technical knowledge, prepare for certifications, and support career growth.',
     image: careerCoaching,
     imageAlt: 'Career coaching website landing page screenshot',
-    tools: ['React', 'HTML', 'CSS', 'TailwindCSS', 'Vercel', 'API', 'Git'],
+    tools: ['React', 'HTML', 'CSS', 'GSAP', 'Canvas API', 'TailwindCSS', 'Git'],
     link: 'https://oracle-career-coaching.vercel.app/',
     github: 'https://github.com/kaungkhantnaynay/Oracle-Career-Coaching-Program',
   },
   {
-    title: 'E-Commerce Website',
+    title: 'Healing Club Myanmar',
     description:
-      'All of Us Are Smart is an e-commerce shoe website designed to give customers a smooth shopping experience. It features a modern design, product browsing, and a simple checkout process, with room for future features like filters, reviews, and secure payments.',
-    image: shoeRetail,
-    imageAlt: 'Shoe e-commerce website product page screenshot',
-    tools: ['React', 'JavaScript', 'CSS3', 'Redux', 'TailwindCSS', 'Authentication', 'Firebase', 'API'],
-    link: 'https://all-of-us-are-smart.vercel.app/',
-    github: 'https://github.com/kaungkhantnaynay/AllOfUsAreSmart',
+      'Healing Club Myanmar is a holistic wellness and spiritual guidance platform offering tarot-based insight, emotional support, and self-reflection tools for people seeking clarity in their personal lives. The project is designed to create a calm, trustworthy online experience where visitors can explore healing-focused services, connect with guidance, and receive supportive messages through a simple digital flow.',
+    image: HealingClub,
+    imageAlt: 'Healing Club Myanmar-Service website',
+    tools: ['React', 'Next.js', 'TypeScript', 'shadcn/ui', 'TailwindCSS', 'GSAP', 'Zod', 'Upstash Redis', 'Next API', 'Resend', 'Cloudinary', 'Jest'],
+    link: 'https://www.healingclubmyanmar.org/',
+    github: 'private',
   },
   {
     title: 'BeanCo Mini E-commerce',
@@ -45,12 +46,12 @@ export const projects = [
     link: 'http://test.firstrubber.com/',
   },
   {
-    title: 'Logistics ERP Project',
+    title: 'Best Step ERP Project',
     description:
-      'A full-stack logistics ERP web application designed to manage orders, inventory, shipments, and operational workflows. Built with role-based access, real-time updates, and a scalable architecture to support real-world logistics operations.',
+      'A full-stack logistics ERP web application designed to manage orders, inventory, shipments, warehouse and operational workflows. Built with role-based access, real-time updates, and a scalable architecture to support real-world logistics operations.',
     image: logistics,
     imageAlt: 'Logistics ERP dashboard screenshot',
-    tools: ['Next.js', 'TypeScript', 'TailwindCSS', 'Recharts', 'Node.js', 'MySQL', 'RESTful APIs'],
+    tools: ['Next.js', 'TypeScript', 'TailwindCSS', 'ShadCN UI', 'Node.js', 'PostgreSQL', 'RESTful APIs', 'JWT', 'RBAC', 'Docker'],
     link: 'https://logistics-erp-project.vercel.app/',
     github: 'https://github.com/kaungkhantnaynay/Logistics-ERP-Project',
   },
